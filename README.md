@@ -1,2 +1,3 @@
 # Particle-Collision-System-Represented-as-a-Distributed-System
 Particles moving and colliding in 2d space are represented by this repository. It uses a distributed system approach where worker nodes are responsible for computing state information(particle velocity, position, etc) for a specific region of the 2d space. The master node receives this state info and sends it to a client node for visual rendering.
+test of push
