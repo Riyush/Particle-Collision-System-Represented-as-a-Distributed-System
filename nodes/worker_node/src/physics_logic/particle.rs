@@ -1,4 +1,5 @@
 use std::fmt;
+use std::ops;
 use crate::utils::type_check;
 
 // Physical Constants for the Electron (declared outside the method)
@@ -34,6 +35,38 @@ impl Components
             x: self.x / magnitude,
             y: self.y / magnitude,
             z: self.z / magnitude,
+        }
+    }
+    pub fn scale(&self, scale_factor:f64) -> Self{
+        Components {
+            x: self.x * scale_factor,
+            y: self.y * scale_factor,
+            z: self.z * scale_factor,
+        }
+    }
+}
+// Don't take ownership of original vectors, but return a new vector
+impl ops::Add for &Components{
+    type Output = Components;
+
+    fn add(self, other:Self) -> Components{
+        Components {
+            x: self.x + other.x,
+            y: self.y + other.y,
+            z: self.z + other.z,
+        }
+    }
+}
+// Take ownership of both vectors and immediately drop them.
+// Use in cases where original vectors are no longer useful
+impl ops::Add for Components{
+    type Output = Self;
+
+    fn add(self, other:Self) -> Self{
+        Components {
+            x: self.x + other.x,
+            y: self.y + other.y,
+            z: self.z + other.z,
         }
     }
 }
@@ -193,13 +226,8 @@ impl BaseParticle
     // but large enough so that there isn't too much load on the network
     // and enough time for the client to receive state updates.
     fn move_simulation(&mut self, dt:f64){
-        self.position.x = self.position.x + self.velocity.x * dt;
-        self.position.y = self.position.y + self.velocity.y * dt;
-        self.position.z = self.position.z + self.velocity.z * dt;
-
-        self.velocity.x = self.velocity.x + self.acceleration.x * dt;
-        self.velocity.y = self.velocity.y + self.acceleration.y * dt;
-        self.velocity.z = self.velocity.z + self.acceleration.z * dt;
+        self.position = &self.position + &(self.velocity.scale(dt));
+        self.velocity = &self.velocity + &(self.acceleration.scale(dt));
     }
 }
 // Implementing the Display Trait allows the .to_string() method which allows
@@ -212,6 +240,7 @@ impl fmt::Display for BaseParticle{
 }
 
 pub fn main() {
+    let constructed = BaseParticle::new(Components{x:1.0, y:2.0, z:3.0}, Components{x:-2.0, y:4.0, z:5.0});
     let particle_instance = BaseParticle {
         position: Components {x:1.0, y:2.0, z:3.0},
         velocity: Components {x:-2.0, y:4.0, z:5.0},
@@ -220,7 +249,7 @@ pub fn main() {
         charge: 1.0,
         spin: 1.0,
     };
-    let mut electron_example = Particle::Electron {base:particle_instance};
+    let mut electron_example = Particle::Electron{base:constructed};
     electron_example.name();
     // Note, the type is a tuple with a reference to the base 
     //particle and the particle type as the second argument.
