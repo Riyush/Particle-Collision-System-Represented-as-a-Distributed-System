@@ -1,0 +1,33 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "Clang",
+	"compiler-simulate-id" : "",
+	"config" : "",
+	"cxx-modules" : 
+	{
+		"CMakeFiles/Core_Library.dir/Core_library/src/Core.c++.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "CXX_MODULES",
+			"relative-directory" : "Core_library/src",
+			"source" : "/app/src/nodes/master_node/Core_library/src/Core.c++",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		}
+	},
+	"dir-cur-bld" : "/app/src/nodes/master_node/build",
+	"dir-cur-src" : "/app/src/nodes/master_node",
+	"dir-top-bld" : "/app/src/nodes/master_node/build",
+	"dir-top-src" : "/app/src/nodes/master_node",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/app/src/nodes/master_node/Core_library/src"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir"
+}

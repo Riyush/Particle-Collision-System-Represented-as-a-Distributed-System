@@ -1,0 +1,16 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/Core_Library.dir/Core_library/src/Core.c++.o",
+      "provides": [
+        {
+          "is-interface": true,
+          "logical-name": "Core_Test",
+          "source-path": "/app/src/nodes/master_node/Core_library/src/Core.c++"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

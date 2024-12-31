@@ -1,0 +1,14 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/app.dir/bin/app.c++.o",
+      "requires": [
+        {
+          "logical-name": "Core_Test"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

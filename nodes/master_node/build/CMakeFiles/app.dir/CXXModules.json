@@ -1,0 +1,12 @@
+{
+	"modules" : {},
+	"references" : 
+	{
+		"Core_Test" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/Core_Library.dir/Core_Test.pcm"
+		}
+	},
+	"usages" : {}
+}

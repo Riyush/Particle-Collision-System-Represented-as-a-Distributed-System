@@ -1,0 +1,4 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles/Core_Library.dir/Core_library/src/Core.c++.o | CMakeFiles/Core_Library.dir/Core_Test.pcm: dyndep
+  restat = 1
+

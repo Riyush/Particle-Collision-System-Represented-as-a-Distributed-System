@@ -4,9 +4,12 @@
 pub mod physics_logic{// Declares the physics_logic module
     // Declare submodules which are files in this case
     pub mod particle;
-    pub mod simulation;
+    pub mod space;
     pub mod collision;
 } 
+pub mod node_management { // Declares the node_management module
+    pub mod node_creation;
+}
 mod utils{ // Declares the utils module
     pub mod type_check;
 } 

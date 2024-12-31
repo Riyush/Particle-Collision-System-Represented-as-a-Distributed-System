@@ -1,0 +1,19 @@
+{
+	"modules" : 
+	{
+		"Core_Test" : 
+		{
+			"bmi" : "/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir/Core_Test.pcm",
+			"is-private" : false
+		}
+	},
+	"references" : 
+	{
+		"Core_Test" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/Core_Library.dir/Core_Test.pcm"
+		}
+	},
+	"usages" : {}
+}

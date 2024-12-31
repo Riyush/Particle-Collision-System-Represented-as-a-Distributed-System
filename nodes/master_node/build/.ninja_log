@@ -1,0 +1,14 @@
+# ninja log v5
+17	126	1735585310000000000	CMakeFiles/app.dir/bin/app.c++.o.ddi	c23847f8fb63f75a
+15	235	1735585310000000000	CMakeFiles/Core_Library.dir/Core_library/src/Core.c++.o.ddi	9a33b2d0b3383f91
+237	351	1735585310000000000	CMakeFiles/Core_Library.dir/CXX.dd	c70e55f5f7c905af
+237	351	1735585310000000000	/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir/CXXModules.json	c70e55f5f7c905af
+237	351	1735585310000000000	CMakeFiles/Core_Library.dir/Core_library/src/Core.c++.o.modmap	c70e55f5f7c905af
+380	495	1735585310000000000	CMakeFiles/app.dir/CXX.dd	eede2dc42b9c6f07
+380	495	1735585310000000000	/app/src/nodes/master_node/build/CMakeFiles/app.dir/CXXModules.json	eede2dc42b9c6f07
+380	495	1735585310000000000	CMakeFiles/app.dir/bin/app.c++.o.modmap	eede2dc42b9c6f07
+376	2012	1735585312000000000	CMakeFiles/Core_Library.dir/Core_library/src/Core.c++.o	b583c35640059927
+376	2012	1735585312000000000	CMakeFiles/Core_Library.dir/Core_Test.pcm	b583c35640059927
+2067	2192	1735585312000000000	CMakeFiles/app.dir/bin/app.c++.o	940d54cff0b111ee
+2066	2196	1735585312000000000	libCore_Library.a	d732ba58dabef558
+2197	2392	1735585312000000000	app	57da1c43242a0fcd
