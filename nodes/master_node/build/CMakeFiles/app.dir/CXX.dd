@@ -1,3 +1,0 @@
-ninja_dyndep_version = 1.0
-build CMakeFiles/app.dir/bin/app.c++.o: dyndep | CMakeFiles/Core_Library.dir/Core_Test.pcm
-

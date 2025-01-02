@@ -1,4 +1,0 @@
-/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir
-/app/src/nodes/master_node/build/CMakeFiles/app.dir
-/app/src/nodes/master_node/build/CMakeFiles/edit_cache.dir
-/app/src/nodes/master_node/build/CMakeFiles/rebuild_cache.dir

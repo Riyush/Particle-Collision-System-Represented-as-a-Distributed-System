@@ -15,10 +15,19 @@ add_library(Core_Library STATIC)
 target_sources(Core_Library
     PUBLIC
         FILE_SET CXX_MODULES FILES
-            Core_library/src/archive.c++
+            Core_library/src/node_declarations/master_node.c++
+            Core_library/src/node_declarations/worker_node_member.c++
+            Core_library/src/utils/point.c++
+            Core_library/src/worker_node_setup/find_central_point_of_new_worker_node.c++
+            Core_library/src/worker_node_setup/get_network_ports.c++
+
+
 )
 # Add include directories to help the compiler locate module files
 target_include_directories(Core_Library PUBLIC Core_library/src)
+target_include_directories(Core_Library PUBLIC Core_library/src/node_declarations)
+target_include_directories(Core_Library PUBLIC Core_library/src/utils)
+target_include_directories(Core_Library PUBLIC Core_library/src/worker_node_setup)
 
 # Application setup
 add_executable(app bin/app.c++)
