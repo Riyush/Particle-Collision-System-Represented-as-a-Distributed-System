@@ -10,6 +10,8 @@ export module master_node;
 export import worker_node_member;
 export import find_new_central_point;
 export import network;
+export import docker_command;
+export import system_command;
 
 export class MasterNode {
 public:
@@ -34,13 +36,25 @@ public:
     void allocate_worker_nodes() {
         // find new central points for nodes in the system
         std::vector<Point3D> new_centers = find_new_central_points(this->space_side_length);
-
+        //generate docker build command
+        // DO this step 1 time to avoid rebuilding an image
+        std::string build(generate_docker_build());
+        // execute build command
+        execute_command(build);
+        
+        initialize_ports_status();
+        
         for (int i = 0; i <new_centers.size(); i++) {
             // get ports for each new worker node
-            int tcp_port = find_next_available_port(5000,6000, true);
+            int tcp_port = find_next_available_port();
 
-            int udp_port = find_next_available_port(5000,6000, false);
-            // initialize worker node
+            int udp_port = find_next_available_port();
+
+            // initialize worker node - rerun the already build image
+            //generate docker run command
+            std::string run(generate_docker_run(this->TCP_Address, this->UDP_Address, tcp_port, udp_port, new_centers[i]));
+            //execute docker run command
+            execute_command(run);
 
             //store metadata about the worker node within this master node
             if (this->nodes.find(new_centers[i]) != this->nodes.end()) {

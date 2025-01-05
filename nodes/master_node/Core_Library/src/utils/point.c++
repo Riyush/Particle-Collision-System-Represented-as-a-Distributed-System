@@ -5,11 +5,10 @@ module;
 
 export module point_3D;
 
-export class Point3D {
-private:
-    float x, y, z;
+export class Point3D { 
 
 public:
+    float x, y, z;
     // Constructor
     Point3D(float x, float y, float z) : x(x), y(y), z(z) {}
 

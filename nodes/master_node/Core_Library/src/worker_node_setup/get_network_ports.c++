@@ -1,33 +1,45 @@
 module;
 
 #include <iostream>
-#include <stdexcept>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <unistd.h>
+#include <vector>
+#include <map>
+#include <string>
+#include <cstdlib> // For getenv
+#include <sstream>
 
 export module network;
 
-export int find_next_available_port(int start_port, int end_port, bool is_tcp) {
-    for (int port = start_port; port <= end_port; ++port) {
-        int sock = socket(AF_INET, is_tcp ? SOCK_STREAM : SOCK_DGRAM, 0);
-        if (sock < 0) {
-            throw std::runtime_error("Failed to create socket");
+std::map<int, bool> ports_status;
+
+// Helper function to retrieve port numbers from environment variables
+void retrieve_ports_from_env(const std::string &prefix, int count) {
+    for (int i = 0; i < count; ++i) {
+        std::string env_var = prefix + "_" + std::to_string(i);
+        const char *port_str = std::getenv(env_var.c_str());
+        if (port_str) {
+            int port = std::stoi(port_str);
+            ports_status[port] = false; // Initialize the port as available
         }
-
-        sockaddr_in addr{};
-        addr.sin_family = AF_INET;
-        addr.sin_port = htons(port);
-        addr.sin_addr.s_addr = INADDR_ANY;
-
-        // Try to bind the socket
-        if (bind(sock, reinterpret_cast<sockaddr*>(&addr), sizeof(addr)) == 0) {
-            close(sock); // Close the socket after successful bind
-            return port; // Return the available port
-        }
-
-        close(sock); // Close the socket if binding fails
     }
-    
-    throw std::runtime_error("No available ports in the specified range");
+}
+
+// Initialize ports_status once during server startup
+export void initialize_ports_status() {
+    static bool initialized = false;
+    if (!initialized) {
+        retrieve_ports_from_env("TCP", 28);
+        retrieve_ports_from_env("UDP", 28);
+        initialized = true;
+    }
+}
+
+export int find_next_available_port() {
+    for (auto &entry : ports_status) {
+        if (!entry.second) {
+            entry.second = true;
+            return entry.first;
+        }
+    }
+    // If no available port is found
+    return -1;
 }

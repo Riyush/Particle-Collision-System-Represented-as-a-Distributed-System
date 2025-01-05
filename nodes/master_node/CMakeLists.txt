@@ -20,6 +20,8 @@ target_sources(Core_Library
             Core_library/src/utils/point.c++
             Core_library/src/worker_node_setup/find_central_point_of_new_worker_node.c++
             Core_library/src/worker_node_setup/get_network_ports.c++
+            Core_library/src/worker_node_setup/create_docker_command.c++
+            Core_library/src/worker_node_setup/execute_system_command.c++
 
 
 )

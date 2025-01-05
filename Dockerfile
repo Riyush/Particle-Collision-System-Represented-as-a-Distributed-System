@@ -14,6 +14,7 @@ WORKDIR /app/src
 # Update package lists and install basic development tools
 RUN apt-get update && apt-get install -y \
     software-properties-common \
+    docker.io \
     build-essential \
     curl \
     wget \
