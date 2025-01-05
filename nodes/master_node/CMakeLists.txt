@@ -31,6 +31,10 @@ target_include_directories(Core_Library PUBLIC Core_library/src/node_declaration
 target_include_directories(Core_Library PUBLIC Core_library/src/utils)
 target_include_directories(Core_Library PUBLIC Core_library/src/worker_node_setup)
 
-# Application setup
+# Application setup - needs to encapsulate all logic of starting the application
 add_executable(app bin/app.c++)
 target_link_libraries(app PRIVATE Core_Library)
+
+# New executable specifically for debugging
+add_executable(debug bin/debug.c++)
+target_link_libraries(debug PRIVATE Core_Library)

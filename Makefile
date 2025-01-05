@@ -26,6 +26,7 @@ ENV_VARS = \
 	-e TCP_24=${TCP_24} \
 	-e TCP_25=${TCP_25} \
 	-e TCP_26=${TCP_26} \
+	-e TCP_26=${TCP_26} \
 	-e UDP_0=${UDP_0} \
 	-e UDP_1=${UDP_1} \
 	-e UDP_2=${UDP_2} \
@@ -53,6 +54,7 @@ ENV_VARS = \
 	-e UDP_24=${UDP_24} \
 	-e UDP_25=${UDP_25} \
 	-e UDP_26=${UDP_26} \
+	-e UDP_27=${UDP_27} 
 	
 # Image Name + other ENV vars
 IMAGE_NAME=particle_project
@@ -61,10 +63,13 @@ REPO_PORT_FLAG= -v "$(shell pwd):/app/src"
 
 DOCKER_FLAG= -v /var/run/docker.sock:/var/run/docker.sock
 
-.PHONY: build interactive
+.PHONY: build interactive start_app check_ports load_env run_docker
 
 build:
 	docker build . -t ${IMAGE_NAME} 
 
 interactive:
 	docker run -it ${REPO_PORT_FLAG} ${DOCKER_FLAG} ${ENV_VARS} ${IMAGE_NAME} /bin/bash
+
+start_app: #check_ports load_env build run_docker
+	python3 check_ports.py && . ./env_vars.sh && docker run ${REPO_PORT_FLAG} ${DOCKER_FLAG} ${ENV_VARS} ${IMAGE_NAME} ./nodes/master_node/build/app

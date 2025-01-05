@@ -1,0 +1,8 @@
+-x c++-module
+-fmodule-output=CMakeFiles/Core_Library.dir/master_node.pcm
+-fmodule-file=worker_node_member=CMakeFiles/Core_Library.dir/worker_node_member.pcm
+-fmodule-file=find_new_central_point=CMakeFiles/Core_Library.dir/find_new_central_point.pcm
+-fmodule-file=network=CMakeFiles/Core_Library.dir/network.pcm
+-fmodule-file=docker_command=CMakeFiles/Core_Library.dir/docker_command.pcm
+-fmodule-file=system_command=CMakeFiles/Core_Library.dir/system_command.pcm
+-fmodule-file=point_3D=CMakeFiles/Core_Library.dir/point_3D.pcm

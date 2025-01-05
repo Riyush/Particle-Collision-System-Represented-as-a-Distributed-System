@@ -1,0 +1,2 @@
+-x c++-module
+-fmodule-output=CMakeFiles/Core_Library.dir/worker_node_member.pcm

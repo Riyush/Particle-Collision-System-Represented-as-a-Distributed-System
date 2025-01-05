@@ -1,0 +1,96 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "Clang",
+	"compiler-simulate-id" : "",
+	"config" : "",
+	"cxx-modules" : 
+	{
+		"CMakeFiles/Core_Library.dir/Core_library/src/node_declarations/master_node.c++.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "CXX_MODULES",
+			"relative-directory" : "Core_library/src/node_declarations",
+			"source" : "/app/src/nodes/master_node/Core_library/src/node_declarations/master_node.c++",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/Core_Library.dir/Core_library/src/node_declarations/worker_node_member.c++.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "CXX_MODULES",
+			"relative-directory" : "Core_library/src/node_declarations",
+			"source" : "/app/src/nodes/master_node/Core_library/src/node_declarations/worker_node_member.c++",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/Core_Library.dir/Core_library/src/utils/point.c++.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "CXX_MODULES",
+			"relative-directory" : "Core_library/src/utils",
+			"source" : "/app/src/nodes/master_node/Core_library/src/utils/point.c++",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/Core_Library.dir/Core_library/src/worker_node_setup/create_docker_command.c++.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "CXX_MODULES",
+			"relative-directory" : "Core_library/src/worker_node_setup",
+			"source" : "/app/src/nodes/master_node/Core_library/src/worker_node_setup/create_docker_command.c++",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/Core_Library.dir/Core_library/src/worker_node_setup/execute_system_command.c++.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "CXX_MODULES",
+			"relative-directory" : "Core_library/src/worker_node_setup",
+			"source" : "/app/src/nodes/master_node/Core_library/src/worker_node_setup/execute_system_command.c++",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/Core_Library.dir/Core_library/src/worker_node_setup/find_central_point_of_new_worker_node.c++.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "CXX_MODULES",
+			"relative-directory" : "Core_library/src/worker_node_setup",
+			"source" : "/app/src/nodes/master_node/Core_library/src/worker_node_setup/find_central_point_of_new_worker_node.c++",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		},
+		"CMakeFiles/Core_Library.dir/Core_library/src/worker_node_setup/get_network_ports.c++.o" : 
+		{
+			"bmi-only" : false,
+			"destination" : null,
+			"name" : "CXX_MODULES",
+			"relative-directory" : "Core_library/src/worker_node_setup",
+			"source" : "/app/src/nodes/master_node/Core_library/src/worker_node_setup/get_network_ports.c++",
+			"type" : "CXX_MODULES",
+			"visibility" : "PUBLIC"
+		}
+	},
+	"dir-cur-bld" : "/app/src/nodes/master_node/build",
+	"dir-cur-src" : "/app/src/nodes/master_node",
+	"dir-top-bld" : "/app/src/nodes/master_node/build",
+	"dir-top-src" : "/app/src/nodes/master_node",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/app/src/nodes/master_node/Core_library/src",
+		"/app/src/nodes/master_node/Core_library/src/node_declarations",
+		"/app/src/nodes/master_node/Core_library/src/utils",
+		"/app/src/nodes/master_node/Core_library/src/worker_node_setup"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir"
+}

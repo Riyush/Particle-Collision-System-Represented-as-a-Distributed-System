@@ -1,0 +1,27 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "GNU",
+	"compiler-id" : "Clang",
+	"compiler-simulate-id" : "",
+	"config" : "",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "/app/src/nodes/master_node/build",
+	"dir-cur-src" : "/app/src/nodes/master_node",
+	"dir-top-bld" : "/app/src/nodes/master_node/build",
+	"dir-top-src" : "/app/src/nodes/master_node",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : 
+	[
+		"/app/src/nodes/master_node/Core_library/src",
+		"/app/src/nodes/master_node/Core_library/src/node_declarations",
+		"/app/src/nodes/master_node/Core_library/src/utils",
+		"/app/src/nodes/master_node/Core_library/src/worker_node_setup"
+	],
+	"language" : "CXX",
+	"linked-target-dirs" : 
+	[
+		"/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir"
+	],
+	"module-dir" : "/app/src/nodes/master_node/build/CMakeFiles/app.dir"
+}
