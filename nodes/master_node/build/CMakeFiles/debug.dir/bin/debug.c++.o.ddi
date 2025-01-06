@@ -1,0 +1,9 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/debug.dir/bin/debug.c++.o"
+    }
+  ],
+  "version": 1
+}

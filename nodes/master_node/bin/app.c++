@@ -1,14 +1,18 @@
-import master_node;
-import point_3D;
 #include <iostream>
 #include <vector>
+#include <string>
 
+import network;
+import master_node;
+
+//This script needs to encapsulate all logic of starting the application
 int main()
 {
-	MasterNode master("192.168.0.100", "9090");
+	std::string master_tcp = get_new_port();
+	std::string master_udp = get_new_port();
 
-	master.allocate_worker_nodes();
-	master.allocate_worker_nodes();
+	MasterNode master(master_tcp, master_udp);
+
 	master.allocate_worker_nodes();
 	
 }

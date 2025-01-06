@@ -1,0 +1,33 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/Core_Library.dir/Core_library/src/node_declarations/master_node.c++.o",
+      "provides": [
+        {
+          "is-interface": true,
+          "logical-name": "master_node",
+          "source-path": "/app/src/nodes/master_node/Core_library/src/node_declarations/master_node.c++"
+        }
+      ],
+      "requires": [
+        {
+          "logical-name": "worker_node_member"
+        },
+        {
+          "logical-name": "find_new_central_point"
+        },
+        {
+          "logical-name": "network"
+        },
+        {
+          "logical-name": "docker_command"
+        },
+        {
+          "logical-name": "system_command"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

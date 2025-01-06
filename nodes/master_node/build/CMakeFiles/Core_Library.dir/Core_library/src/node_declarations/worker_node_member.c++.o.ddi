@@ -1,0 +1,16 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/Core_Library.dir/Core_library/src/node_declarations/worker_node_member.c++.o",
+      "provides": [
+        {
+          "is-interface": true,
+          "logical-name": "worker_node_member",
+          "source-path": "/app/src/nodes/master_node/Core_library/src/node_declarations/worker_node_member.c++"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

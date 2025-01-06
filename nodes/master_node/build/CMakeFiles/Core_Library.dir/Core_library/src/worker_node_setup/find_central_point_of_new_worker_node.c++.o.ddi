@@ -1,0 +1,21 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/Core_Library.dir/Core_library/src/worker_node_setup/find_central_point_of_new_worker_node.c++.o",
+      "provides": [
+        {
+          "is-interface": true,
+          "logical-name": "find_new_central_point",
+          "source-path": "/app/src/nodes/master_node/Core_library/src/worker_node_setup/find_central_point_of_new_worker_node.c++"
+        }
+      ],
+      "requires": [
+        {
+          "logical-name": "point_3D"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

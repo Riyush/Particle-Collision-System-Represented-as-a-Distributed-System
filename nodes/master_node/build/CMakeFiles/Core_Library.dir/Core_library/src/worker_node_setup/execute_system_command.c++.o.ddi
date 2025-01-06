@@ -1,0 +1,16 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/Core_Library.dir/Core_library/src/worker_node_setup/execute_system_command.c++.o",
+      "provides": [
+        {
+          "is-interface": true,
+          "logical-name": "system_command",
+          "source-path": "/app/src/nodes/master_node/Core_library/src/worker_node_setup/execute_system_command.c++"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

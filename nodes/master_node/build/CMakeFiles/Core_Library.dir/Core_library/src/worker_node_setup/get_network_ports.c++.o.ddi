@@ -1,0 +1,16 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/Core_Library.dir/Core_library/src/worker_node_setup/get_network_ports.c++.o",
+      "provides": [
+        {
+          "is-interface": true,
+          "logical-name": "network",
+          "source-path": "/app/src/nodes/master_node/Core_library/src/worker_node_setup/get_network_ports.c++"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

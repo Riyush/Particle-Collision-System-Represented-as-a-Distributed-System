@@ -1,0 +1,98 @@
+{
+	"modules" : 
+	{
+		"docker_command" : 
+		{
+			"bmi" : "/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir/docker_command.pcm",
+			"is-private" : false
+		},
+		"find_new_central_point" : 
+		{
+			"bmi" : "/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir/find_new_central_point.pcm",
+			"is-private" : false
+		},
+		"master_node" : 
+		{
+			"bmi" : "/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir/master_node.pcm",
+			"is-private" : false
+		},
+		"network" : 
+		{
+			"bmi" : "/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir/network.pcm",
+			"is-private" : false
+		},
+		"point_3D" : 
+		{
+			"bmi" : "/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir/point_3D.pcm",
+			"is-private" : false
+		},
+		"system_command" : 
+		{
+			"bmi" : "/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir/system_command.pcm",
+			"is-private" : false
+		},
+		"worker_node_member" : 
+		{
+			"bmi" : "/app/src/nodes/master_node/build/CMakeFiles/Core_Library.dir/worker_node_member.pcm",
+			"is-private" : false
+		}
+	},
+	"references" : 
+	{
+		"docker_command" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/Core_Library.dir/docker_command.pcm"
+		},
+		"find_new_central_point" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/Core_Library.dir/find_new_central_point.pcm"
+		},
+		"master_node" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/Core_Library.dir/master_node.pcm"
+		},
+		"network" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/Core_Library.dir/network.pcm"
+		},
+		"point_3D" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/Core_Library.dir/point_3D.pcm"
+		},
+		"system_command" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/Core_Library.dir/system_command.pcm"
+		},
+		"worker_node_member" : 
+		{
+			"lookup-method" : "by-name",
+			"path" : "CMakeFiles/Core_Library.dir/worker_node_member.pcm"
+		}
+	},
+	"usages" : 
+	{
+		"docker_command" : 
+		[
+			"point_3D"
+		],
+		"find_new_central_point" : 
+		[
+			"point_3D"
+		],
+		"master_node" : 
+		[
+			"docker_command",
+			"find_new_central_point",
+			"network",
+			"point_3D",
+			"system_command",
+			"worker_node_member"
+		]
+	}
+}

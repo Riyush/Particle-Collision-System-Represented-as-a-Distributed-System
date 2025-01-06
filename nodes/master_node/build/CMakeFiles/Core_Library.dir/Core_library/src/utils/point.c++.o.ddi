@@ -1,0 +1,16 @@
+{
+  "revision": 0,
+  "rules": [
+    {
+      "primary-output": "CMakeFiles/Core_Library.dir/Core_library/src/utils/point.c++.o",
+      "provides": [
+        {
+          "is-interface": true,
+          "logical-name": "point_3D",
+          "source-path": "/app/src/nodes/master_node/Core_library/src/utils/point.c++"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}
