@@ -16,8 +16,8 @@ export std::string generate_docker_build() {
 // pass in important variables as env Vars in worker node's container
 export std::string generate_docker_run(std::string& tcp_master, std::string& udp_master, int tcp_worker, int udp_worker, const Point3D& central_point) {
     //convert ports into IP addresses
-    std::string tcp_address_worker = "127.0.0.1:" + std::to_string(tcp_worker);
-    std::string udp_address_worker = "127.0.0.1:" + std::to_string(udp_worker);
+    std::string tcp_address_worker = std::string("127.0.0.1:") + std::to_string(tcp_worker);
+    std::string udp_address_worker = std::string("127.0.0.1:") + std::to_string(udp_worker);
 
     // Get x,y,z points
     float x = central_point.x;

@@ -42,7 +42,8 @@ public:
         // execute build command
         execute_command(build);
         
-        initialize_ports_status();
+        // This became obsolete
+        //initialize_ports_status();
         
         for (int i = 0; i <new_centers.size(); i++) {
             // get ports for each new worker node

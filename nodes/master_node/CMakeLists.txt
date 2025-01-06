@@ -36,5 +36,5 @@ add_executable(app bin/app.c++)
 target_link_libraries(app PRIVATE Core_Library)
 
 # New executable specifically for debugging
-add_executable(debug bin/debug.c++)
-target_link_libraries(debug PRIVATE Core_Library)
+#add_executable(debug bin/debug.c++)
+#target_link_libraries(debug PRIVATE Core_Library)

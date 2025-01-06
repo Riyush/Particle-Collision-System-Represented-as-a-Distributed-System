@@ -5,6 +5,9 @@
       "primary-output": "CMakeFiles/app.dir/bin/app.c++.o",
       "requires": [
         {
+          "logical-name": "network"
+        },
+        {
           "logical-name": "master_node"
         }
       ]

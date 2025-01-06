@@ -24,7 +24,7 @@ void retrieve_ports_from_env(const std::string &prefix, int count) {
 }
 
 // Initialize ports_status once during server startup
-export void initialize_ports_status() {
+void initialize_ports_status() {
     static bool initialized = false;
     if (!initialized) {
         retrieve_ports_from_env("TCP", 28);
@@ -42,4 +42,13 @@ export int find_next_available_port() {
     }
     // If no available port is found
     return -1;
+}
+std::string form_local_network_address(int port){
+    return std::string("127.0.0.1:") + std::to_string(port);
+}
+
+export std::string get_new_port(){
+    initialize_ports_status();
+    int port_num = find_next_available_port();
+    return form_local_network_address(port_num);
 }
