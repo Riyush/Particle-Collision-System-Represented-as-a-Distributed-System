@@ -9,7 +9,9 @@ pub mod physics_logic{// Declares the physics_logic module
 } 
 pub mod node_management { // Declares the node_management module
     pub mod node_creation;
+    pub mod node_server;
 }
-mod utils{ // Declares the utils module
+pub mod utils{ // Declares the utils module
     pub mod type_check;
+    pub mod env_vars;
 } 

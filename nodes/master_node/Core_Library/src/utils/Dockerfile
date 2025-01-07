@@ -9,4 +9,4 @@ COPY worker_node /app
 RUN rustup update
 #RUN rustup default stable
 
-CMD ["cargo", "run", "--bin", "worker_node"]
+CMD ["cargo", "run", "--bin", "node_startup"]

@@ -23,6 +23,7 @@ public:
 // Constructor
     MasterNode(const std::string& udp, const std::string& tcp)
         : UDP_Address(udp), TCP_Address(tcp), space_side_length(0){}
+
 // Method to get a list of keys from the map
     std::vector<Point3D> getKeys() const {
         std::vector<Point3D> keys;
@@ -56,7 +57,7 @@ public:
             std::string run(generate_docker_run(this->TCP_Address, this->UDP_Address, tcp_port, udp_port, new_centers[i]));
             //execute docker run command
             execute_command(run);
-
+            //break; for debug
             //store metadata about the worker node within this master node
             if (this->nodes.find(new_centers[i]) != this->nodes.end()) {
                 throw std::runtime_error("Error: A worker node already exists at the given central point!");
