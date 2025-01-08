@@ -12,7 +12,7 @@ int main()
 	std::string master_udp = get_new_port();
 
 	MasterNode master(master_tcp, master_udp);
-
+	
 	master.allocate_worker_nodes();
 	
 }

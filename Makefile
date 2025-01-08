@@ -71,5 +71,7 @@ build:
 interactive:
 	docker run -it ${REPO_PORT_FLAG} ${DOCKER_FLAG} ${ENV_VARS} ${IMAGE_NAME} /bin/bash
 
-start_app: #check_ports load_env build run_docker
-	python3 check_ports.py && . ./env_vars.sh && docker run ${REPO_PORT_FLAG} ${DOCKER_FLAG} ${ENV_VARS} ${IMAGE_NAME} ./nodes/master_node/build/app
+start_app:
+	python3 check_ports.py && \
+	. ./env_vars.sh && \
+	docker run ${REPO_PORT_FLAG} ${DOCKER_FLAG} ${ENV_VARS} ${IMAGE_NAME} ./nodes/master_node/build/app
